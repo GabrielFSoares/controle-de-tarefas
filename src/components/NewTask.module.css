@@ -1,0 +1,21 @@
+.article {
+    display: flex;
+    justify-content: center;
+}
+
+.article input {
+    width: 39.875rem;
+    height: 3.375rem;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    padding-left: 16px;
+}
+
+.article button {
+    width: 5.625rem;
+    background: var(--blue-dark);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    margin-left: 8px;
+}
