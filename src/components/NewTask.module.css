@@ -1,9 +1,8 @@
-.article {
+.contentNewTask {
     display: flex;
-    justify-content: center;
 }
 
-.article input {
+.contentNewTask input {
     width: 39.875rem;
     height: 3.375rem;
     background: var(--gray-500);
@@ -12,10 +11,22 @@
     padding-left: 16px;
 }
 
-.article button {
+.contentNewTask button {
     width: 5.625rem;
     background: var(--blue-dark);
-    border: 1px solid var(--gray-700);
+    color: var(--gray-100);
+    font-weight: bold;
+    font-size: 0.875rem;
     border-radius: 8px;
     margin-left: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:  0.5rem;
+}
+
+.contentNewTask button:hover {
+    background: var(--blue);
+    cursor: pointer;
 }

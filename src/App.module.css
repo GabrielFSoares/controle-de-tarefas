@@ -1,0 +1,6 @@
+.contentTask {
+    display: flex;
+    flex-direction: column;
+    max-width: 46rem;
+    margin: 0 auto;
+}
