@@ -4,12 +4,12 @@ import style from "./NewTask.module.scss"
 
 export function NewTask() {
     return (
-        <section className={style.contentNewTask}>
+        <form className={style.contentNewTask}>
             <input type="text" placeholder="Adicione uma nova tarefa" />
             <button type="submit">
-                Criar
+                 Criar
                 <PlusCircle size={20}/>
             </button>  
-        </section>
+        </form>
     )
 }

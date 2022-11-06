@@ -1,9 +1,9 @@
-import style from './Tasks.module.scss'
+import style from './TaskList.module.scss'
 import Clipboard from '../assets/Clipboard.svg'
 
 import { Trash } from 'phosphor-react'
 
-export function Tasks() {
+export function TaskList() {
 
     function handleChangeIconChecked() {
         const divIcon = document.getElementById(style.iconUnchecked)

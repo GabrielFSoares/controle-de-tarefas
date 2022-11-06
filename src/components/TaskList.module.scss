@@ -37,7 +37,7 @@
 }
 
 .withoutTask {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -67,6 +67,8 @@
 }
 
 .taskList {
+	visibility: hidden;
+
 	div p {
 		font-size: 0.875rem;
 		display: flex;
