@@ -25,8 +25,8 @@
 			background: var(--gray-400);
 			color: var(--gray-200);
 			border-radius: 99px;
-			width: 25px;
-			height: 19px;
+			min-width: 1.5625rem;
+			height: 1.1875rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -53,7 +53,7 @@
 	}
 
 	#pText1 {
-		margin-top: 16px;
+		margin-top: 1rem;
 		font-weight: bold;
 	}
 }
@@ -63,7 +63,7 @@
 	background: var(--gray-500);
 	border: 1px solid var(--gray-400);
 	border-radius: 8px;
-	padding: 16px;
+	padding: 1rem;
 }
 
 .taskList {
@@ -85,9 +85,9 @@
 	#iconUnchecked, #iconCheck {
 		display: flex;
 		align-items: center;
-		width: 24px;
-		height: 24px;
-		margin-right: 12px;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-right: 0.75rem;
 		cursor: pointer;
 		transition: background-image 0.2s;
 	}
@@ -112,10 +112,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 5px;
-		margin-left: 12px;
-		width: 28px;
-		height: 28px;
+		padding: 0.3125rem;
+		margin-left: 0.75rem;
+		width: 1.75rem;
+		height: 1.75rem;
 		cursor: pointer;
 		color: var(--gray-300);
 
