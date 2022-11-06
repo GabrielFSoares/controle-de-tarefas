@@ -1,0 +1,125 @@
+.headerTasks {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 64px;
+}
+
+.headerTasks p {
+	display: flex;
+	align-items: center;
+}
+
+#pCreate {
+	color: var(--blue);
+}
+
+#pConclude {
+	color: var(--purple);
+}
+
+.headerTasks div {
+	display: flex;
+}
+
+.headerTasks span {
+	background: var(--gray-400);
+	color: var(--gray-200);
+	border-radius: 99px;
+	width: 25px;
+	height: 19px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.75rem;
+	margin-left: 8px;
+}
+
+.headerTasks div {
+	display: flex;
+	align-items: center;
+}
+
+.contentTask {
+	margin-top: 24px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.withoutTask {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 15.25rem;
+
+	box-shadow: 0px -1px var(--gray-400);
+	border-radius: 8px;
+	width: 100%;
+}
+
+.withoutTask p {
+	font-size: 1rem;
+	color: var(--gray-300);
+}
+
+#pText1 {
+	margin-top: 16px;
+	font-weight: bold;
+}
+
+.taskList > div {
+	display: flex;
+	height: 4.5rem;
+	background: var(--gray-500);
+	border: 1px solid var(--gray-400);
+	border-radius: 8px;
+	padding: 16px;
+}
+
+.taskList div p {
+	color: var(--gray-100);
+	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+}
+
+.divCheck {
+	display: flex;
+	align-items: center;
+	margin-right: 6px;
+	cursor: pointer;
+}
+
+.iconCheck {
+	width: 1.5rem;
+}
+
+/*#unchecked :hover {
+	visibility: hidden;
+	max-width: 0;
+}
+
+#unchecked :hover + #uncheckedHover {
+	visibility: visible;
+	max-width: none;
+}
+
+*/
+
+
+#uncheckedHover {
+	visibility: hidden;
+	max-width: 0;
+}
+
+.divCheck img[id=unchecked]:hover {
+	visibility: hidden;
+	max-width: 0;
+}
+
+.divCheck img[id=uncheckedHover] {
+	visibility: hidden;
+	max-width: 0;
+}
