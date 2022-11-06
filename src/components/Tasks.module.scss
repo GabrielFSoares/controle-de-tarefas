@@ -2,49 +2,38 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 64px;
-}
+	margin-bottom: 24px;
 
-.headerTasks p {
-	display: flex;
-	align-items: center;
-}
+	div {
+		display: flex;
+		align-items: center;
 
-#pCreate {
-	color: var(--blue);
-}
+		p {
+			display: flex;
+			align-items: center;
+		}
 
-#pConclude {
-	color: var(--purple);
-}
-
-.headerTasks div {
-	display: flex;
-}
-
-.headerTasks span {
-	background: var(--gray-400);
-	color: var(--gray-200);
-	border-radius: 99px;
-	width: 25px;
-	height: 19px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 0.75rem;
-	margin-left: 8px;
-}
-
-.headerTasks div {
-	display: flex;
-	align-items: center;
-}
-
-.contentTask {
-	margin-top: 24px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+		#pCreate {
+			color: var(--blue);
+		}
+		
+		#pConclude {
+			color: var(--purple);
+		}
+	
+		span {
+			background: var(--gray-400);
+			color: var(--gray-200);
+			border-radius: 99px;
+			width: 25px;
+			height: 19px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.75rem;
+			margin-left: 8px;
+		}
+	}
 }
 
 .withoutTask {
@@ -57,69 +46,86 @@
 	box-shadow: 0px -1px var(--gray-400);
 	border-radius: 8px;
 	width: 100%;
-}
 
-.withoutTask p {
-	font-size: 1rem;
-	color: var(--gray-300);
-}
+	p {
+		font-size: 1rem;
+		color: var(--gray-300);
+	}
 
-#pText1 {
-	margin-top: 16px;
-	font-weight: bold;
+	#pText1 {
+		margin-top: 16px;
+		font-weight: bold;
+	}
 }
 
 .taskList > div {
 	display: flex;
-	height: 4.5rem;
 	background: var(--gray-500);
 	border: 1px solid var(--gray-400);
 	border-radius: 8px;
 	padding: 16px;
 }
 
-.taskList div p {
-	color: var(--gray-100);
-	font-size: 0.875rem;
-	display: flex;
-	align-items: center;
+.taskList {
+	div p {
+		font-size: 0.875rem;
+		display: flex;
+		align-items: center;
+	}
+
+	#pUnchecked {
+		color: var(--gray-100);
+	}
+
+	#pChecked {
+		color: var(--gray-300);
+		text-decoration: line-through;
+	}
+
+	#iconUnchecked, #iconCheck {
+		display: flex;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		margin-right: 12px;
+		cursor: pointer;
+		transition: background-image 0.2s;
+	}
+
+	#iconUnchecked {
+		background-image: url(/src/assets/Unchecked.svg);
+	}
+	
+	#iconUnchecked:hover {
+		background-image: url(/src/assets/UncheckedHover.svg);
+	}
+	
+	#iconCheck {
+		background-image: url(/src/assets/Checked.svg);
+	}
+	
+	#iconCheck:hover {
+		background-image: url(/src/assets/CheckedHover.svg);
+	}
+
+	.trashIcon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
+		margin-left: 12px;
+		width: 28px;
+		height: 28px;
+		cursor: pointer;
+		color: var(--gray-300);
+
+		transition: background-color 0.2s, color 0.2s;
+	}
+
+	.trashIcon:hover {
+		background: var(--gray-400);
+		border-radius: 4px;
+		color: var(--danger);
+	}
 }
 
-.divCheck {
-	display: flex;
-	align-items: center;
-	margin-right: 6px;
-	cursor: pointer;
-}
-
-.iconCheck {
-	width: 1.5rem;
-}
-
-/*#unchecked :hover {
-	visibility: hidden;
-	max-width: 0;
-}
-
-#unchecked :hover + #uncheckedHover {
-	visibility: visible;
-	max-width: none;
-}
-
-*/
-
-
-#uncheckedHover {
-	visibility: hidden;
-	max-width: 0;
-}
-
-.divCheck img[id=unchecked]:hover {
-	visibility: hidden;
-	max-width: 0;
-}
-
-.divCheck img[id=uncheckedHover] {
-	visibility: hidden;
-	max-width: 0;
-}
