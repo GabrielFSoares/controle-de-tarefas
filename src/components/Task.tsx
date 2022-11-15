@@ -1,43 +1,43 @@
 import style from './Task.module.scss'
 import { Trash } from 'phosphor-react'
 
-interface Task {
-    id: number
+interface TaskProps {
+    id: string
     content: string
+    onDeleteTask: (task: string) => void
+    onChangeIcon: (task: HTMLElement) => void
 }
 
-export function Task() {
-
-    const taskArray = {
-        id: 1,
-        content: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    }
+export function Task({id, content, onDeleteTask, onChangeIcon}: TaskProps) {
 
     function handleChangeIconChecked() {
-        const divIcon = document.getElementById(style.iconUnchecked)
-        const p = document.getElementById(style.pUnchecked)
+        const divTask = document.getElementById(id)
 
-        if(divIcon) {
+        const divIcon = divTask?.children.item(0)
+        const p = divTask?.children.item(1)
+
+        if(divIcon?.classList.contains(style.iconUnchecked)) {
             divIcon?.classList.remove(style.iconUnchecked)
             divIcon?.classList.add(style.iconCheck)
-            divIcon?.setAttribute('id', style.iconCheck)
-            p?.setAttribute('id', style.pChecked)
+            p?.classList.remove(style.pUnchecked)
+            p?.classList.add(style.pChecked)
         } else {
-            const divIcon = document.getElementById(style.iconCheck)
-            const p = document.getElementById(style.pChecked)
-
             divIcon?.classList.remove(style.iconCheck)
             divIcon?.classList.add(style.iconUnchecked)
-            divIcon?.setAttribute('id', style.iconUnchecked)
-            p?.setAttribute('id', style.pUnchecked)
+            p?.classList.remove(style.pChecked)
+            p?.classList.add(style.pUnchecked)
         }
     }
 
+    function handleDeleteTask() {
+        onDeleteTask(id)
+    }
+
     return (
-        <div>
-            <div id={style.iconUnchecked} onClick={handleChangeIconChecked} />
-            <p id={style.pUnchecked}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-            <span className={style.trashIcon}><Trash size={20} /></span>
+        <div id={id} className={style.contentTask}>
+            <div className={style.iconUnchecked} onClick={handleChangeIconChecked} />
+            <p className={style.pUnchecked}>{content}</p>
+            <span className={style.trashIcon} onClick={handleDeleteTask}><Trash size={20} /></span>
         </div>
     )
 }
