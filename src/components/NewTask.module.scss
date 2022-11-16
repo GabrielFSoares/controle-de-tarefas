@@ -12,6 +12,10 @@
         padding-left: 16px;
     }
 
+    input:focus {
+        outline: 1px solid var(--purple-dark);
+    }
+
     button {
         width: 5.625rem;
         background: var(--blue-dark);

@@ -1,5 +1,4 @@
 import { Header } from './components/Header'
-import { NewTask } from './components/NewTask'
 import { TaskList } from './components/TaskList'
 
 import style from './App.module.css'
@@ -10,7 +9,6 @@ export function App() {
       <Header/>
 
       <article className={style.contentTask}>
-        <NewTask/>
         <TaskList/>
       </article>
 

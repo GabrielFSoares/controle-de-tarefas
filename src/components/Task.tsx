@@ -5,10 +5,9 @@ interface TaskProps {
     id: string
     content: string
     onDeleteTask: (task: string) => void
-    onChangeIcon: (task: HTMLElement) => void
 }
 
-export function Task({id, content, onDeleteTask, onChangeIcon}: TaskProps) {
+export function Task({id, content, onDeleteTask}: TaskProps) {
 
     function handleChangeIconChecked() {
         const divTask = document.getElementById(id)
