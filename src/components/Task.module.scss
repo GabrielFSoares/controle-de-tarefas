@@ -1,10 +1,16 @@
 .contentTask {
+    display: flex;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    padding: 1rem;
     margin-bottom: 12px;
 
     p {
         font-size: 0.875rem;
         display: flex;
         align-items: center;
+        max-width: 632px;
     }
     
     .pUnchecked {

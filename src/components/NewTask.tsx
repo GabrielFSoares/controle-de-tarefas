@@ -4,11 +4,11 @@ import { ChangeEvent, FormEvent, useState } from "react"
 import style from "./NewTask.module.scss"
 
 
-interface propNewTask {
+interface PropNewTask {
     onNewTask: (task: string) => void
 }
 
-export function NewTask({onNewTask}: propNewTask) {
+export function NewTask({onNewTask}: PropNewTask) {
 
     const [taskText, setTaskText] = useState('')
 
@@ -17,6 +17,7 @@ export function NewTask({onNewTask}: propNewTask) {
 
         if(taskText !== '') {
             onNewTask(taskText)
+            setTaskText('')
         }
     }
 
